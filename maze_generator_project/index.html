@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>maze_generator_project</title>
+
+	<script src="libraries/p5.js"></script>
+	<script src="libraries/p5.dom.js"></script>
+	<script src="libraries/p5.sound.js"></script>
+	<script src="sketch.js"></script>
+	<script src="cell.js"></script>
+	<script src="generator.js"></script>
+	<script src="solver.js"></script>
+	<script src="play.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+		.jumbotron {
+			padding-top: 25px;
+			height: 100px;
+			text-align: center
+		}
+	</style>
+</head>
+<body>
+	<div class = "container">
+		<div class = "jumbotron">
+			<h2>Maze Generator and Solver<h2>
+		</div>
+		
+		<b>Maze Size:</b> <input id = "maze_size" value = "30"></input>
+		<b>Maze Type:</b> <select id = "maze_type">
+			<option value = "1">dead end</option>
+			<option value = "2">no dead end</option>
+			<option value = "3">few dead ends</option>
+		</select>
+		<br><br>
+		<button type = "submit" class = "btn btn-danger" id = "button1">Generate</button>
+		<button type = "submit" class = "btn btn-danger" id = "button4">Direct</button>
+		<br><br><br><br>
+		<b>Play maze:</b> <button type = "submit" class = "btn btn-warning" id = "button3">Play</button>
+		<br><br><br><br>
+		<b>Maze Solving Algorithm: <select id = "maze_solve">
+			<option value = "1">depth first search (dfs)</option>
+			<option value = "2">breadth first search (bfs)</option>
+			<option value = "3">a*</option>
+			<option value = "4">greedy search</option>
+		</select>
+		<br><br>
+		<button type = "submit" class = "btn btn-success" id = "button2">Solve</button>
+		
+	</p>
+</div>
+</body>
+</html>
